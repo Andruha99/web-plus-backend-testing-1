@@ -23,6 +23,6 @@ describe("PostsService", () => {
     const newPost = postsService.create(post);
     const foundPost = postsService.find(newPost.id);
 
-    expect(newPost.id).toEqual(foundPost);
+    expect(foundPost).toMatchObject(newPost);
   });
 });
